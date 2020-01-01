@@ -1,0 +1,16 @@
+---
+- hosts: localhost 
+  become: yes
+  name: tensor_installer
+  tasks:
+   - name: Python3.6 installation 
+     dnf: name=python3.6 state=latest
+
+   - name: pip download 
+     shell: wget https://bootstrap.pypa.io/get-pip.py
+
+   - name: install pip with python 3.6
+     shell: sudo python3.6 get-pip.py
+
+   - name: Installing Tensorflow 
+     shell: sudo python3.6 -m pip install tensorflow
