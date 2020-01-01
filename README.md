@@ -10,3 +10,19 @@ It was built to run on multiple CPUs or GPUs and even mobile operating systems, 
   
 ## How does it work ?  
 TensorFlow allows developers to create dataflow graphs—structures that describe how data moves through a graph, or a series of processing nodes. Each node in the graph represents a mathematical operation, and each connection or edge between nodes is a multidimensional data array, or tensor.
+  
+## A simple TensorFlow script 
+```python
+import tensorflow as tf
+
+x1 = tf.constant([1,2,3,4])
+x2 = tf.constant([5,6,7,8])
+
+result = tf.multiply(x1, x2)
+
+sess = tf.Session()
+
+print(sess.run(result))
+
+sess.close()
+```
