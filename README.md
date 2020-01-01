@@ -12,6 +12,8 @@ It was built to run on multiple CPUs or GPUs and even mobile operating systems, 
 TensorFlow allows developers to create dataflow graphs—structures that describe how data moves through a graph, or a series of processing nodes. Each node in the graph represents a mathematical operation, and each connection or edge between nodes is a multidimensional data array, or tensor.
   
 ## A simple TensorFlow script 
+  
+This is a simple python script using TensorFlow to multiply 2 tensorflow constan
 ```python
 import tensorflow as tf
 
@@ -26,3 +28,4 @@ print(sess.run(result))
 
 sess.close()
 ```
+Note : We must use TensorFlow sessions here because without starting a session we will not be able to see any output.
